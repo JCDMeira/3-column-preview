@@ -7,21 +7,43 @@
 html {
   font-size: 62.5%;
 }
-
-.App {
+/* .App {
+} */
+.conteiner {
   background: hsl(0, 0%, 95%);
-  width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  overflow: auto;
 }
 
 .content {
   width: 64%;
-  height: 62.125%;
+  max-width: 120rem;
+  min-height: 62.125%;
+  max-height: 50rem;
   background: white;
   display: flex;
   margin-top: 4rem;
   border-radius: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .content {
+    margin-left: -10%;
+  }
+}
+
+@media (max-width: 928px) {
+  .conteiner {
+    align-items: flex-start;
+    /* min-height: 185vh; */
+  }
+  .content {
+    margin: 88px 0;
+    flex-direction: column;
+    width: 87.2%;
+  }
 }

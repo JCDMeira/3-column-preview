@@ -32,3 +32,16 @@
   margin-bottom: 8.2rem;
   line-height: 2.4rem;
 }
+
+@media (max-width: 928px) {
+  #orange {
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  #very-dark {
+    border-radius: 0 0 1rem 1rem;
+  }
+  .classCar p {
+    margin-bottom: 2.6rem;
+  }
+}
