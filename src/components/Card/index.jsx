@@ -6,9 +6,11 @@ function Card({ children, tittle, icon, color }) {
   return (
     <div className="classCar" id={color}>
       <img src={icon} alt="" />
-      <h1>{tittle}</h1>
+      <div className="info">
+        <h1>{tittle}</h1>
 
-      <p>{children}</p>
+        <p>{children}</p>
+      </div>
       <Button color={`button-${color}`}>Learn More</Button>
     </div>
   );

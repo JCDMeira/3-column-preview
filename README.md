@@ -16,21 +16,21 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 ## Overview
 
-This is the front-end mentor's second challenge. The challenge is to build this component of the Stats preview card component solution and make it as close to the design as possible. Building the desing with whatever you want to finish, any language, framework or tools.
+This is the front-end mentor's third challenge. The challenge is to build this component of the 3-column preview card component solution and make it as close to the design as possible. Building the desing with whatever you want to finish, any language, framework or tools.
 
 ### The challenge
 
 Users should be able to:
 
-- View the optimal layout depending on their device's screen size
+View the optimal layout depending on their device's screen size
+See hover states for interactive elements
 
 ## Screenshot
 
 ### Mobile design
 
 <p  align="center">
-  <img width="300px" src="./presentation/mobile1.png" align="center"></img>
-  <img width="300px" src="./presentation/mobile2.png" align="center"></img>
+  <img width="300px" src="./presentation/mobile.png" align="center"></img>
 </p>
 
 ### Tablets design
@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Desktop design
 
-<p  align="center"><img width="600px" src="./presentation/desktop.png" align="center"></img></p>
+<p  align="center"><img width="720px" src="./presentation/desktop.png" align="center"></img></p>
 
 ### Links
 
@@ -50,116 +50,44 @@ Users should be able to:
 
 ### Built with
 
-- Mobile-first workflow
 - Flexbox
 - [React](https://reactjs.org/) - JS library
 
-### What I learned
+### What I learned (arrumar)
 
-Solucionando o erro "missing in props validation eslint(react/prop-types)"
-
-```bash
-   # install prop-types
-
-   npm install --save prop-types
-```
-
-```jsx
-import P from "prop-types";
-
-// ...
-// write your component here
-// ...
-
-componentName.defaultProps = {
-  componentProp2: 0,
-};
-componentName.propTypes = {
-  componentProp1: P.string.isRequired,
-  componentProp2: P.number,
-};
-```
+Sometimes keep measurements fixed and not just based on percentages. When all measurements are based on percentages, unwanted behaviors can occur that will cause you to get lost in the styling.
+By using only percentages I found errors in my responsive design, and when I established fixed heights for content and cards, the design was much better suited to responsiveness, with only the width behaving as adaptable, while the cards had defined sizes.
 
 ```CSS
-  /*
-    Use  Media Queries to configure a responsive design
-  */
-  .info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: Inter;
-}
+  @media (max-width: 928px) {
+  .conteiner {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: inherit; /**/
+  }
 
-  /*
-    with @media it is possible to set rules for certain screen sizes only, adhering to responsiveness
-  */
+  .content {
+    width: 87.2%;
 
-  @media (min-width: 1200px) {
-  .info {
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: left;
+    height: 132.6rem;
+    background: white;
+    margin: 88px 0 88px 0;
+
+    display: inline; /*  */
   }
 }
 
-}
-```
-
-Use text-transform to capitalize all letters instead of using hardcoded
-
-```CSS
-  .info h1 {
-  text-transform: uppercase;
-}
-```
-
-With ReactJS parts of the code are used as components, and these are separated into a component folder, which can be reused.
-
-```jsx
-import React from "react";
-import P from "prop-types";
-import "./style.css";
-
-function InfoData({ children, value }) {
-  return (
-    <div className="info">
-      <h1>{value}</h1>
-      <p>{children}</p>
-    </div>
-  );
-}
-
-InfoData.propTypes = {
-  children: P.string.isRequired,
-  value: P.string.isRequired,
-};
-
-export { InfoData };
-```
-
-use your components multiple times where necessary, passing in the data to make it dynamic.
-
-```jsx
-// ...
-// ...
-// ...
-<div className="fieldData">
-  <InfoData value="10k+">Companies </InfoData>
-  <InfoData value="314">Templates </InfoData>
-  <InfoData value="12M+">queries </InfoData>
-</div>
-// ...
-// ...
-// ...
 ```
 
 ### Useful resources
 
 - [react tutorial](https://pt-br.reactjs.org/tutorial/tutorial.html) - This helped me structure the components and build the proposed page.
-- [missing in props validation eslint(react/prop-types)](https://forhjy.medium.com/react-solution-for-children-is-missing-in-props-validation-eslint-react-prop-types-2e11bc6043c7) - This is an amazing article that finally helped me to resolve the problem of "...is missing in props validation eslint(react/prop-types)" . And I would recommend to anyone who is still having this problem to read.
-- [text-tranform](https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-transform) - This is an article that helped me understand how to use text-tranform.
+- [my figma design](https://www.figma.com/file/IY4faSy5LPomrLSln321Ag/bottom?node-id=0%3A1) - My figma design for help anyone who wants to build this challenge.
+- [CSS units](https://www.alura.com.br/artigos/guia-de-unidades-no-css) - CSS units guide .
+- [text-tranform](https://www.maujor.com/blog/2013/03/08/por-que-height-100-nao-funciona/) - This is an amazing article that finally helped me solve my design liability issue. And I would recommend to anyone who still has this problem to read it.
 
 ## Author
 

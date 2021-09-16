@@ -15,10 +15,27 @@ button {
   color: hsl(31, 77%, 52%);
 }
 
+#button-orange:hover {
+  background: #b56a1e;
+  cursor: pointer;
+  color: #fff;
+}
+
 #button-dark {
   color: hsl(184, 100%, 22%);
 }
 
+#button-dark:hover {
+  background: #1c464a;
+  cursor: pointer;
+  color: #fff;
+}
+
 #button-very-dark {
   color: hsl(179, 100%, 13%);
+}
+#button-very-dark:hover {
+  background: hsl(184, 100%, 22%);
+  cursor: pointer;
+  color: #fff;
 }

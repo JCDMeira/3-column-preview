@@ -34,6 +34,9 @@
 }
 
 @media (max-width: 928px) {
+  .classCar {
+    height: 44.2rem;
+  }
   #orange {
     border-radius: 1rem 1rem 0 0;
   }
