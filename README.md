@@ -41,10 +41,14 @@ See hover states for interactive elements
 
 <p  align="center"><img width="720px" src="./presentation/desktop.png" align="center"></img></p>
 
+### result of my work
+
+<p  align="center"><img width="1080px" src="./presentation/design-x-myWork.png" align="center"></img></p>
+
 ### Links
 
-- Solution URL: [jcdmeira-order-summary](https://www.frontendmentor.io/solutions/jcdmeira-statspreviewcard-Z1uHO-OSD)
-- Live Site URL: [jcdmeira-order-summary](https://jcdm-stats-prev.netlify.app)
+- Solution URL: [My solution for this challenge](https://www.frontendmentor.io/solutions/3column-with-react-3BdTaZ_bd)
+- Live Site URL: [check the result ](https://jdcm-3-column.netlify.app)
 
 ## My process
 
